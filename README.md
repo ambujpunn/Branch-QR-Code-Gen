@@ -21,6 +21,6 @@ Follow the script instructions and enter the required fields. The only field tha
 
 ## Output
 
-The script will store the QR Code image in the file you included in the script prompts or if not included, it will save it in this format: `qr-code-<random id>` within the same directory
+The script will store the QR Code image in the file you included in the script prompts or if not included, it will save it in this format: `qr-code-<random id>.png` within the same directory
 
 The script will also print out the underlying link of the QR Code
