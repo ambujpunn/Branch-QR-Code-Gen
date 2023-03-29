@@ -1,5 +1,5 @@
 # Branch-QR-Code-Gen
-Generate a basic qr code quickly with its link 
+Generate a basic qr code quickly with its link using the terminal (ZSH Shell)
 
 ## Prerequisites
 1. Install `zbar` using Homebrew: https://formulae.brew.sh/formula/zbar (this does the decoding of the qr code to get the wrapped link)
