@@ -1,11 +1,4 @@
 # Welcome and instructions
-
-if ! command -v zbarimg &> /dev/null
-then
-    echo "The command zbarimg could not be found, follow these instructions to install it and try again: https://formulae.brew.sh/formula/zbar"
-    exit
-fi
-
 echo "Welcome to a super basic Branch QR Code generator. Enter in the following fields or press enter to skip. \n"
 
 # Branch Key
@@ -61,6 +54,15 @@ curl -o $output_file \
 }' 
 
 # Print out results and use zbarimg to get url behind qr code
-echo "\nFile saved at $PWD/$output_file."
+mv $output_file ~/Desktop/$output_file
+echo "\nFile saved at ~/Desktop/$output_file."
 echo "URL for QR Code:"
-zbarimg $output_file
+
+# If zbarimg not installed, let user know how it can be
+if ! command -v zbarimg &> /dev/null
+then
+    echo "The command zbarimg could not be found. If you'd like to get the Branch link associated with this QR Code, follow these instructions to install it and try again: https://formulae.brew.sh/formula/zbar"
+    exit
+else 
+    zbarimg ~/Desktop/$output_file
+fi
